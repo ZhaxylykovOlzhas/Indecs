@@ -1,0 +1,40 @@
+create nonclustered index full_name
+on authors (name, surname)
+
+create unique clustered index author_id
+on authors (id)
+
+SELECT sum(id) 
+from book
+WHERE name LIKE '%a%'
+
+CREATE table wtf(
+id int primary key,
+id int()
+
+
+drop table wtf
+
+insert into producer
+values (1, 'first')
+
+update authors
+set name = 'A?ae'
+set surename = 'Eiiaii'
+where id = 1
+
+alter table book
+add lol int
+
+delete from book
+where izdatel_id = 46848
+
+select * from purchases
+where price = (select max(price) from purchases)
+
+select b.name, a.name
+from book b, authors a
+group by b.name, a.name
+
+select b.name from book b union 
+select a.name from authors a
